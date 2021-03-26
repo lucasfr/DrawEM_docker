@@ -1,0 +1,11 @@
+version: "3"
+services:
+  drawem:
+    container_name: DrawEM
+    build: .
+    environment: 
+          - DISPLAY=$DISPLAY
+    volumes:
+          - "./src:/src"
+          - "./data:/data"
+    tty: true
