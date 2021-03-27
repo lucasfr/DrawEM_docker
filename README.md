@@ -14,7 +14,7 @@ git clone https://github.com/lucasfr/DrawEM_docker/
 ```
 
 ```
-docker-compoose build
+docker-compose build
 ```
 ## Singularity
 
