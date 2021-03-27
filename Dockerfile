@@ -115,8 +115,4 @@ RUN echo '{ \
     \n  ] \
     \n}' > /neurodocker/neurodocker_specs.json
 
-#COPY ./src/DrawEM /src/DrawEM
-
-#RUN /src/DrawEM/setup.sh -y
-
 RUN /bin/bash
