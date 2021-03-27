@@ -11,7 +11,7 @@
 # 
 #     https://github.com/ReproNim/neurodocker
 
-FROM debian:stretch
+FROM biomedia/mirtk
 
 USER root
 
@@ -28,7 +28,10 @@ RUN export ND_ENTRYPOINT="/neurodocker/startup.sh" \
            ca-certificates \
            curl \
            locales \ 
-           git \
+           git \ 
+           cmake \
+           gcc-7 \
+           g++-7 \
            unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
@@ -57,6 +60,12 @@ ENV FSLDIR="/opt/fsl-6.0.3" \
     FSLMACHINELIST="" \
     FSLREMOTECALL="" \
     FSLGECUDAQ="cuda.q"
+
+COPY ./src/DrawEM /src/DrawEM
+
+RUN /src/DrawEM/setup.sh
+
+
 RUN apt-get update -qq \
     && apt-get install -y -q --no-install-recommends \
            bc \
@@ -106,6 +115,8 @@ RUN echo '{ \
     \n  ] \
     \n}' > /neurodocker/neurodocker_specs.json
 
-COPY ./src/DrawEM /src/DrawEM
+#COPY ./src/DrawEM /src/DrawEM
 
-RUN /src/DrawEM/setup.sh -y
+#RUN /src/DrawEM/setup.sh -y
+
+RUN /bin/bash
