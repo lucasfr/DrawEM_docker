@@ -20,9 +20,9 @@ docker-compoose build
 
 You may also convert it into a Singularity .sif file. For more on this please see Singularity [docs](https://singularity.lbl.gov).
 
-## Third-party software
+## Third party software
 
-For third-party licensing check links below:
+For third party licensing check links below:
 
 [MIRTK](https://github.com/BioMedIA/MIRTK/blob/master/LICENSE.txt)
 
