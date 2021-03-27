@@ -25,7 +25,9 @@ You may also convert it into a Singularity .sif file. For more on this please se
 For third-party licensing check links below:
 
 [MIRTK](https://github.com/BioMedIA/MIRTK/blob/master/LICENSE.txt)
+
 [DrawEM](https://github.com/MIRTK/DrawEM/blob/master/LICENSE.txt)
+
 [FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Licence)
 
 ## License
